@@ -1,1 +1,4 @@
 file created for task6
+greetings SUAI
+hello 4118
+3+4=7
