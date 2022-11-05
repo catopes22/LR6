@@ -126,7 +126,7 @@
     ```console
     git log --pretty=format:"%h | %cd | %an: %s"
     ```
-    ![14.png](./images/14.png)
+    ![14.PNG](./images/14.PNG)
  
 --------
 
