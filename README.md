@@ -11,153 +11,124 @@
 ## Ход работы
 1. Создаётся аккаунт на сайте GitHub
 
-    ![1.png][def]
+    ![1.png](./images/1.png)
 2. Была сделана копия репозитория https://github.com/Kurtyanik/LR6/ в личное хранилище (fork).
 
-    ![1.png](./assets/1.png)
-    ![2.png](./assets/2.png)
-3. Git уже был установлен.
-
-    ```console
-    git --version
-    ```
-    Версия git:
+    ![2.png](./images/2.png)
+3. Устанавливается Git.
     
-    ![3.png](./assets/3.png)
-4. Был настроен клиент git *(было введено имя пользователя и email)*.
+    ![3.png](./images/3.png)
+4. Настройка клиента Git, вводится имя пользователя и email.
 
     ```console
-    git config --global user.name "4118 Горожанкин А.А."
-    git config --global user.email "rememberov.andrei@yandex.ru"
+    git config --global user.name "4118 Кужлев А.А."
+    git config --global user.email "kuzhlev.artem@mail.ru"
     ```
-    ![4.png](./assets/4.png)
-5. Личный удалённый репозиторий был склонирован на компьютер.
+    ![4.png](./images/4.png)
+5. Личный удалённый репозиторий клонируется на компьютер.
 
     ```console
-    git clone https://github.com/FugiOG/LR6.git
+    git clone https://github.com/catopes22/LR6.git
     ```
-    ![5.png](./assets/5.png)
-6. Был добавлен новый файл в репозиторий через интерфейс GitHub, затем изменения были подтянуты в локальный репозиторий.
+    ![5.png](./images/5.png)
+6. Был добавлен текстовый файл task6.txt в репозиторий через интерфейс GitHub, затем изменения были подтянуты в локальный репозиторий.
 
-    ![6.png](./assets/6.png)
-    ![7.png](./assets/7.png)
+    ![6.png](./images/6.png)
     ```console
     git branch
     git pull
     ```
-    ![8.png](./assets/8.png)
+    ![6.1.png](./images/6.1.png)
+    ![6.2.png](./images/6.2.png)
 7. Была получена история операций для каждой из веток.
 
     ```console
     git log
     ```
-    ![9.png](./assets/9.png)
+    ![7.png](./images/7.png)
     ```console
     git checkout branch1
     git log
     ```
-    ![10.png](./assets/10.png)
+    ![7.1.png](./images/7.1.png)
 8. Были просмотрены последние изменения.
 
     ```console
     git status
     ```
-    ![11.png](./assets/11.png)
-9.  Было выполнено слияние в ветку master с разрешением конфликтов при помощи графического интерфейса.
+    ![8.png](./images/8.png)
+    ![8.1.png](./images/8.1.png)
+9.  Было выполнено слияние в ветку master с разрешением конфликтов при помощи графического интерфейса Visual Studio Code.
 
     ```console
-    git branch
     git merge branch1
     ```
-    ![12.png](./assets/12.png)
-    ![13.png](./assets/13.png)
+    ![9.png](./images/9.png)
     ```console
-    git status
+    git add mergefile.txt
+    git commit -m "merged master fixed conflict"
     ```
-    ![14.png](./assets/14.png)
-    ```console
-    git add .
-    git commit -m "merge conflict resolution"
-    ```
-    ![15.png](./assets/15.png)
-10. После слиянияю, была удалена побочная ветка.
+    ![9.1.png](./images/9.1.png)
+    ![9.2.png](./images/9.2.png)
+    ![9.3.png](./images/9.3.png)
+    ![9.4.png](./images/9.4.png)
+10. Удаляется побочная ветка.
 
     ```console
     git branch -d branch1
-    git branch
     ```
-    ![16.png](./assets/16.png)
-
-    Также была удалена побочная ветка из удалённого репозитория:
-
-    ```console
-    git push origin -d branch1
-    ```
-    ![28.png](./assets/28.png)
-11. Были сделаны и зафиксированы изменения, при этом были 3 раза оставлены коментарии.
-
-    ```console
-    git status
-    ```
-    ![17.png](./assets/17.png)
+    ![10.png](./images/10.png)
+11. Были сделаны и зафиксированы изменения c 3 комментариями.
 
     ```console
     git add .
-    git commit -m "feat: add greeting SUAI"
+    git commit -m "feat: add greetings SUAI"
     ```
-    ![18.png](./assets/18.png)
+    ![11.png](./images/11.png)
 
     ```console
     git add .
-    git commit -m "feat: add greeting 4118"
+    git commit -m "feat: add hello 4118"
     ```
-    ![19.png](./assets/19.png)
+    ![11.1.png](./images/11.1.png)
 
      ```console
     git add .
-    git commit -m "feat: add mathematical calculation"
+    git commit -m "feat: add equation"
     ```
-    ![20.png](./assets/20.png)
+    ![11.2.png](./images/11.2.png)
 
-    Итоговый вид файла:
+    Вид файла task6.txt:
 
-    ![21.png](./assets/21.png)
+    ![11.3.png](./images/11.3.png)
 12. Был сделан откат коммита.
 
-    последние коммиты в ветке master до удаления:
-        ![22.png](./assets/22.png)
+    Коммит, который будет удалён:
+    ![12.png](./images/12.png)
 
     ```console
     git reset --hard HEAD~
     ```
-    ![23.png](./assets/23.png)
+    ![12.1.png](./images/12.1.png)
 
-    последние коммиты в ветке master после удаления:
-        ![24.png](./assets/24.png)
-    
-    Итоговый файл после отката:
+    Файл task6.txt после отката:
 
-    ![25.png](./assets/25.png)
-13. Была создана ветка для отчёта.
+    ![12.2.png](./images/12.2.png)
+13. Была создана ветка report для отчёта.
 
     ```console
     git branch
     git branch report
-    git branch
-    git checkout report
-    git branch
     ```
-    ![26.png](./assets/26.png)
+    ![13.png](./images/13.png)
 14. Была получена история операций в форматированном виде *(сокращённый хэш | дата коммитера | имя автора: комментарий)*.
 
     ```console
     git log --pretty=format:"%h | %cd | %an: %s"
     ```
-    ![27.png](./assets/27.png)
+    ![14.png](./images/14.png)
 
 --------
 
 ## Вывод: 
-В ходе данной лабораторной работы были изучены базовые возможности системы управления версиями; был получен опыт работы с Git Api, также был получен опыт работы с локальным и удаленным репозиторием.
-
-[def]: ./images/1.png
+В ходе данной лабораторной работы были изучены базовые возможности системы управления версиями, был получен опыт работы с Git Api и с локальным и удаленным репозиторием.
